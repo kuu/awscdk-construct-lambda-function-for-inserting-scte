@@ -20,7 +20,7 @@ export class Lambda extends Construct {
     this.func = new NodejsFunction(scope, 'ScheduleSCTE', {
       runtime: Runtime.NODEJS_18_X,
       entry: path.resolve(__dirname, 'code', 'index.ts'),
-      depsLockFilePath: path.resolve(__dirname, 'code', 'package-lock.json'),
+      depsLockFilePath: path.resolve(__dirname, '..', 'package-lock.json'),
       handler: 'handler',
       timeout: Duration.seconds(30),
       environment: {
