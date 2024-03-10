@@ -1,5 +1,6 @@
 {
   "name": "awscdk-construct-lambda-function-for-inserting-scte",
+  "description": "AWS CDK Construct for scheduling SCTE-35 events using the MediaLive schedule API",
   "repository": {
     "type": "git",
     "url": "https://github.com/kuu/awscdk-construct-lambda-function-for-inserting-scte.git"
@@ -38,18 +39,16 @@
     "@types/node": "^18",
     "@typescript-eslint/eslint-plugin": "^6",
     "@typescript-eslint/parser": "^6",
-    "aws-cdk-lib": "2.1.0",
-    "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "^2.29.1",
     "jest": "^29.7.0",
     "jest-junit": "^15",
-    "jsii": "~5.0.0",
+    "jsii": "~5.3.0",
     "jsii-diff": "^1.95.0",
     "jsii-docgen": "^10.3.21",
     "jsii-pacmak": "^1.95.0",
-    "jsii-rosetta": "~5.0.0",
+    "jsii-rosetta": "~5.3.0",
     "projen": "^0.80.9",
     "standard-version": "^9",
     "ts-jest": "^29.1.2",
@@ -57,14 +56,27 @@
     "typescript": "^5.4.2"
   },
   "peerDependencies": {
-    "aws-cdk-lib": "^2.1.0",
+    "aws-cdk-lib": "^2.132.0",
     "constructs": "^10.0.5"
   },
+  "dependencies": {
+    "@aws-sdk/client-medialive": "^3.529.1",
+    "aws-cdk-lib": "^2.132.0",
+    "constructs": "^10.3.0"
+  },
+  "bundledDependencies": [
+    "@aws-sdk/client-medialive"
+  ],
   "keywords": [
-    "cdk"
+    "EventBridge",
+    "Lambda",
+    "MediaLive",
+    "SCTE",
+    "cdk",
+    "cdk-construct"
   ],
   "main": "lib/index.js",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "version": "0.0.0",
   "jest": {
     "testMatch": [
