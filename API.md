@@ -440,18 +440,8 @@ const lambdaProps: LambdaProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#awscdk-construct-lambda-function-for-inserting-scte.LambdaProps.property.availLength">availLength</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#awscdk-construct-lambda-function-for-inserting-scte.LambdaProps.property.channelId">channelId</a></code> | <code>string</code> | *No description.* |
-
----
-
-##### `availLength`<sup>Required</sup> <a name="availLength" id="awscdk-construct-lambda-function-for-inserting-scte.LambdaProps.property.availLength"></a>
-
-```typescript
-public readonly availLength: number;
-```
-
-- *Type:* number
+| <code><a href="#awscdk-construct-lambda-function-for-inserting-scte.LambdaProps.property.scteDurationInSeconds">scteDurationInSeconds</a></code> | <code>number</code> | *No description.* |
 
 ---
 
@@ -462,6 +452,16 @@ public readonly channelId: string;
 ```
 
 - *Type:* string
+
+---
+
+##### `scteDurationInSeconds`<sup>Required</sup> <a name="scteDurationInSeconds" id="awscdk-construct-lambda-function-for-inserting-scte.LambdaProps.property.scteDurationInSeconds"></a>
+
+```typescript
+public readonly scteDurationInSeconds: number;
+```
+
+- *Type:* number
 
 ---
 
@@ -479,19 +479,9 @@ const scteSchedulerProps: ScteSchedulerProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#awscdk-construct-lambda-function-for-inserting-scte.ScteSchedulerProps.property.availLength">availLength</a></code> | <code>number</code> | *No description.* |
 | <code><a href="#awscdk-construct-lambda-function-for-inserting-scte.ScteSchedulerProps.property.channelId">channelId</a></code> | <code>string</code> | *No description.* |
 | <code><a href="#awscdk-construct-lambda-function-for-inserting-scte.ScteSchedulerProps.property.intervalInMinutes">intervalInMinutes</a></code> | <code>number</code> | *No description.* |
-
----
-
-##### `availLength`<sup>Required</sup> <a name="availLength" id="awscdk-construct-lambda-function-for-inserting-scte.ScteSchedulerProps.property.availLength"></a>
-
-```typescript
-public readonly availLength: number;
-```
-
-- *Type:* number
+| <code><a href="#awscdk-construct-lambda-function-for-inserting-scte.ScteSchedulerProps.property.scteDurationInSeconds">scteDurationInSeconds</a></code> | <code>number</code> | *No description.* |
 
 ---
 
@@ -509,6 +499,16 @@ public readonly channelId: string;
 
 ```typescript
 public readonly intervalInMinutes: number;
+```
+
+- *Type:* number
+
+---
+
+##### `scteDurationInSeconds`<sup>Required</sup> <a name="scteDurationInSeconds" id="awscdk-construct-lambda-function-for-inserting-scte.ScteSchedulerProps.property.scteDurationInSeconds"></a>
+
+```typescript
+public readonly scteDurationInSeconds: number;
 ```
 
 - *Type:* number

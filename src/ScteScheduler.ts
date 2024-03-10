@@ -4,7 +4,7 @@ import { Lambda } from './Lambda';
 
 export interface ScteSchedulerProps {
   readonly channelId: string;
-  readonly availLength: number;
+  readonly scteDurationInSeconds: number;
   readonly intervalInMinutes: number;
 }
 
@@ -15,12 +15,12 @@ export class ScteScheduler extends Construct {
   constructor(scope: Construct, id: string, props: ScteSchedulerProps) {
     super(scope, id);
 
-    const { channelId, availLength, intervalInMinutes } = props;
+    const { channelId, scteDurationInSeconds, intervalInMinutes } = props;
 
     // Create Lambda function to insert SCTE message using the MediaLive schedule API
     this.lambda = new Lambda(this, 'LambdaFunction', {
       channelId,
-      availLength,
+      scteDurationInSeconds,
     });
 
     // Create EventBridge rule to invoke the Lambda function every N minutes
