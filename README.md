@@ -8,7 +8,7 @@ AWS CDK Construct for scheduling SCTE-35 events using the MediaLive schedule API
   * Repeat interval (minutes)
 * Output:
   * Lambda function for calling MediaLive schedule API
-  * EventBridge schedule for periodically involing the function
+  * EventBridge rule for periodically involing the function
 
 ## Install
 [![NPM](https://nodei.co/npm/awscdk-construct-lambda-function-for-inserting-scte.png?mini=true)](https://nodei.co/npm/awscdk-construct-lambda-function-for-inserting-scte/)
@@ -26,7 +26,7 @@ export class ExampleStack extends cdk.Stack {
     // Create periodic SCTE-35 events
     const {schedule, lambda} = new ScteScheduler(this, 'ScteScheduler', {
       channelId: '12345', // MediaLive channel id
-      availLength: 60, // Duration of SCTE:splice_insert (seconds)
+      scteDurationInSeconds: 60, // Duration of SCTE:splice_insert (seconds)
       intervalInMinutes: 2, // Interval of the insertion (minutes)
     });
 

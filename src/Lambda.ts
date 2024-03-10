@@ -6,7 +6,7 @@ import { Construct } from 'constructs';
 
 export interface LambdaProps {
   readonly channelId: string;
-  readonly availLength: number;
+  readonly scteDurationInSeconds: number;
 }
 
 export class Lambda extends Construct {
@@ -15,7 +15,7 @@ export class Lambda extends Construct {
   constructor(scope: Construct, id: string, props: LambdaProps) {
     super(scope, id);
 
-    const { channelId, availLength } = props;
+    const { channelId, scteDurationInSeconds } = props;
 
     this.func = new NodejsFunction(scope, 'ScheduleSCTE', {
       runtime: Runtime.NODEJS_18_X,
@@ -27,7 +27,7 @@ export class Lambda extends Construct {
         NODE_ENV: process.env.NODE_ENV as string,
         REGION: process.env.CDK_DEFAULT_REGION as string,
         CHANNEL_ID: channelId,
-        AVAIL_LENGTH: `${availLength}`,
+        AVAIL_LENGTH: `${scteDurationInSeconds}`,
       },
       logRetention: logs.RetentionDays.TWO_WEEKS,
     });

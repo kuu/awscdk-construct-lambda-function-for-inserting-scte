@@ -8,7 +8,7 @@ test('Create Lambda', () => {
 
   new Lambda(stack, 'Lambda', {
     channelId: '12345',
-    availLength: 30,
+    scteDurationInSeconds: 30,
   });
 
   const template = Template.fromStack(stack);
@@ -23,7 +23,7 @@ test('Create EventBridgeSchedule', () => {
   new EventBridgeSchedule(stack, 'EventBridgeSchedule', {
     func: new Lambda(stack, 'Lambda', {
       channelId: '12345',
-      availLength: 30,
+      scteDurationInSeconds: 30,
     }).func,
     intervalInMinutes: 1,
   });
@@ -39,7 +39,7 @@ test('Create ScteScheduler', () => {
 
   new ScteScheduler(stack, 'ScteScheduler', {
     channelId: '12345',
-    availLength: 30,
+    scteDurationInSeconds: 30,
     intervalInMinutes: 1,
   });
 
