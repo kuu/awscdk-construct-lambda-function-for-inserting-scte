@@ -45,23 +45,23 @@
     "jest": "^29.7.0",
     "jest-junit": "^15",
     "jsii": "~5.3.0",
-    "jsii-diff": "^1.95.0",
-    "jsii-docgen": "^10.3.21",
-    "jsii-pacmak": "^1.95.0",
+    "jsii-diff": "^1.96.0",
+    "jsii-docgen": "^10.3.25",
+    "jsii-pacmak": "^1.96.0",
     "jsii-rosetta": "~5.3.0",
-    "projen": "^0.80.9",
+    "projen": "^0.80.14",
     "standard-version": "^9",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.2"
+    "typescript": "^5.4.3"
   },
   "peerDependencies": {
     "aws-cdk-lib": "^2.132.0",
     "constructs": "^10.0.5"
   },
   "dependencies": {
-    "@aws-sdk/client-medialive": "^3.529.1",
-    "aws-cdk-lib": "^2.132.0",
+    "@aws-sdk/client-medialive": "^3.541.0",
+    "aws-cdk-lib": "^2.134.0",
     "constructs": "^10.3.0"
   },
   "bundledDependencies": [
